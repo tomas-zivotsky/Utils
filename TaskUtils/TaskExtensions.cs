@@ -1,6 +1,6 @@
 ﻿namespace TaskUtils;
 
-public static class TaskExtension
+public static class TaskExtensions
 {
     public static void WhenAll(params Task[] tasks)
     {

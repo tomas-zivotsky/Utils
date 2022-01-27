@@ -2,7 +2,7 @@ using Xunit;
 
 namespace StringUtils.Tests;
 
-public class StringExtensionTests
+public class StringExtensionsTests
 {
     #region IsNullOrEmpty
 
