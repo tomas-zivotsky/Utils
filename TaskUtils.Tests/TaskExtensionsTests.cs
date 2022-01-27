@@ -25,7 +25,7 @@ public class TaskExtensionsTests
         var task2 = Task.Run(async () => throw new Exception());
 #pragma warning restore CS1998
 
-        Assert.Throws<AggregateException>(() => TaskExtensions.WhenAll(task1, task2));
+        Assert.ThrowsAsync<AggregateException>(async () => await TaskExtensions.WhenAll(task1, task2));
     }
 
     [Fact]

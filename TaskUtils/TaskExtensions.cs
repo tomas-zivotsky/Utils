@@ -2,11 +2,11 @@
 
 public static class TaskExtensions
 {
-    public static void WhenAll(params Task[] tasks)
+    public static Task WhenAll(params Task[] tasks)
     {
         var allTasks = Task.WhenAll(tasks);
 
-        if (allTasks.Exception is null) return;
+        if (allTasks.Exception is null) return allTasks;
 
         throw allTasks.Exception ?? throw new Exception("Aggregated exception is not set.");
     }
